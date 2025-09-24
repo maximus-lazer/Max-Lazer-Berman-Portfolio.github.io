@@ -6,7 +6,7 @@
     "email": "mlberman@wpi.edu",
     "phone": "+1 (919)-593-9803",
     "website": "https://maximus-lazer.github.io",
-    "summary": "I Graduated with a B.S. in Robotics Engineering from Worcester Polytechnic Institute in May 2025.",
+    "summary": "Recent Robotics Engineering Graduate | Worcester Polytechnic Institute",
     "location": { "address": "", "postalCode": "01604", "city": "Worcester", "countryCode": "USA", "region": "Massachusetts" },
     "profiles": [
       { "network": "github", "username": "maximus-lazer", "url": "https://github.com/maximus-lazer" },
@@ -17,10 +17,11 @@
   },
   "interests": [
     { "name": "Robotics" },
-    { "name": "Neuromorphic Computing" },
-    { "name": "Quantum Computing" },
-    { "name": "Robotics" },
-    { "name": "3D Graphics" }
+    { "name": "FRC Mentoring (190)" },
+    { "name": "3D Printing" },
+    { "name": "3D Design" },
+    { "name": "Manufacturing" },
+    { "name": "" }
   ],
   "skills": [
     {
