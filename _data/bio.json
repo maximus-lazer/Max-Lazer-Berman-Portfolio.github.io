@@ -2,10 +2,10 @@
   "basics": {
     "name": "Max Lazer Berman",
     "label": "Bachelors of Science in Robotics Engineering at WPI",
-    "picture": "https://media.licdn.com/dms/image/v2/D4E35AQFtLgHxKP9AMg/profile-framedphoto-shrink_400_400/B4EZbGDf8.GQAc-/0/1747079528564?e=1759359600&v=beta&t=zfk-BbtakseSFmeU3izhfmiqZ5o7CM7YzJhhfNi0syE",
+    "picture": "img/sailbot/sailbot-square.jpg",
     "email": "mlberman@wpi.edu",
     "phone": "+1 (919)-593-9803",
-    "website": "https://maximus-lazer.github.io",
+    "website": "img/MaxLazerBerman-square.jpg",
     "summary": "Recent Robotics Engineering Graduate | Worcester Polytechnic Institute",
     "location": { "address": "", "postalCode": "01604", "city": "Worcester", "countryCode": "USA", "region": "Massachusetts" },
     "profiles": [
