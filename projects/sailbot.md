@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/sailbot/sailbot-square.jpg
+image: img/sailbot/sailbot-square.png
 title: "Major Qualifying Project: SailBot"
 date: 2024
 published: true
@@ -19,7 +19,7 @@ labels:
 summary: "Contributed to WPI’s SailBot by designing a main hull PCB with a custom BMS and Jetson Orin Nano + ESP32 architecture, and assisting in CAM/manufacturing of a new wingsail. The robot, powered by ROS2, earned 2nd place at the 2025 International Robotic Sailing Regatta."
 ---
 
-<img class="img-fluid" src="../img/sailbot/sailbot-square.jpg">
+<img class="img-fluid" src="../img/sailbot/sailbot-square.png">
 
 ## Project Overview  
 Improved an autonomous sailing robot for my senior capstone project (Major Qualifying Project) at WPI.  
