@@ -3,8 +3,7 @@ layout: project
 type: project
 image: img/sailbot/sailbot-square.jpg
 title: "Major Qualifying Project: SailBot"
-# All dates must be YYYY-MM-DD format!
-date: 2025-06-13
+date: Aug 24' - Jun 25'
 published: true
 labels:
   - Git/GitHub
@@ -50,6 +49,60 @@ Improved an autonomous sailing robot for my senior capstone project (Major Quali
 
 ---
 
+## Making the New Wingsail
 
+### CAM in Fusion 360
+<figure class="my-3">
+  <img
+    src="{{ site.baseurl }}/img/sailbot/sailbot-ribs-1inch-CAM.png"
+    class="img-fluid rounded shadow-sm"
+    alt="Fusion 360 CAM toolpaths for ribs and spar interfaces">
+  <figcaption class="text-muted text-center mt-2">
+    CAM toolpaths created in Fusion 360 for wingsail ribs and spar pockets.
+  </figcaption>
+</figure>
+
+### CNC Manufacturing (ShopSabre)
+<figure class="my-3">
+  <video
+    class="w-100 rounded shadow-sm"
+    controls
+    playsinline
+    preload="metadata"
+    poster="{{ site.baseurl }}/img/sailbot/sailbot-ribs-1inch-CAM.png">
+    <source src="{{ site.baseurl }}/img/sailbot/sailbot-machiningribs.mp4" type="video/mp4">
+    Your browser does not support the video tag. You can <a href="{{ site.baseurl }}/img/sailbot/sailbot-machiningribs.MOV">download the .MOV</a> instead.
+  </video>
+  <figcaption class="text-muted text-center mt-2">
+    Machining ribs on the Shopsabre CNC using toolpaths generated in Fusion 360.
+  </figcaption>
+</figure>
+
+### Wrap & Assembly Timelapse
+<figure class="my-3">
+  <video
+    class="w-100 rounded shadow-sm"
+    controls
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    poster="{{ site.baseurl }}/img/sailbot/sailbot-ribs-1inch-CAM.png">
+    <source src="{{ site.baseurl }}/img/sailbot/sailbot-wrappingsail.mp4" type="video/mp4">
+    Your browser does not support the video tag. You can <a href="{{ site.baseurl }}/img/sailbot/sailbot-wrappingsail.MOV">download the .MOV</a>.
+  </video>
+  <figcaption class="text-muted text-center mt-2">
+    Timelapse of the MQP team wrapping the assembled wingsail.
+  </figcaption>
+</figure>
+
+---
+
+**Process Notes (Highlights)**
+- Defined toolpaths for rib profiles Fusion 360.
+- Verified stock setup and safe Z heights; simulated tool engagement prior to machining.
+- Machined ribs on a Shopsabre CNC.
+- Wrapped and heat-shrunk assembled wingsail with MonoCote.
 
 
