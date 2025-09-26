@@ -2,22 +2,15 @@
 {%- assign has_single = include.page.date -%}
 
 {%- comment -%}
-  Build display_date:
-  - If start+end exist → "Aug 2024 - Jun 2025" (space after the dash)
-  - If present: true → "Aug 2021 - Present"
-  - Else if single date exists → "Mar 2025"
+  Build display_date with a visible space after the dash.
+  Avoid {%- -%} inside this block so Liquid doesn't trim the spaces.
 {%- endcomment -%}
 {%- capture display_date -%}
-  {%- if has_range -%}
-    {{ include.page.start | date: "%b %Y" }} - 
-    {%- if include.page.present -%}
-      Present
-    {%- else -%}
-      {{ include.page.end | date: "%b %Y" }}
-    {%- endif -%}
-  {%- elsif has_single -%}
-    {{ include.page.date | date: "%b %Y" }}
-  {%- endif -%}
+{% if has_range %}
+  {{ include.page.start | date: "%b %Y" }} &ndash; {% if include.page.present %}Present{% else %}{{ include.page.end | date: "%b %Y" }}{% endif %}
+{% elsif has_single %}
+  {{ include.page.date | date: "%b %Y" }}
+{% endif %}
 {%- endcapture -%}
 
 <div class="card mb-3">
