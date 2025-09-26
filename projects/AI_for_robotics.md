@@ -18,12 +18,15 @@ labels:
 summary: "Designed Bomberman-playing AI agents in two projects: first using A* with a state machine, then expanding to Approximate Q-Learning with adaptive behaviors, achieving at least 50% survival across all scenarios."
 ---
 
-<figure>
-  <img class="img-fluid" src="{{ site.baseurl }}/img/RBE/Bomberman.png" alt="Bomberman AI agents navigating a gridworld with monsters.">
+<figure class="text-center">
+  <img class="img-fluid d-block mx-auto" 
+       src="{{ site.baseurl }}/img/RBE/Bomberman.png" 
+       alt="Bomberman AI agents navigating a gridworld with monsters.">
   <figcaption class="text-center">
     AI agents developed in RBE4701 navigating Bomberman environments with monsters, walls, and hazards.
   </figcaption>
 </figure>
+
 
 ## Project Overview
 As part of **RBE4701: Artificial Intelligence for Robotics**, our team developed autonomous Bomberman agents for two sequential projects. Each project built upon the previous, exploring different AI techniques for decision-making, path planning, and survival against increasingly difficult monster behaviors. In both projects, the benchmark was to achieve at least **50% survival across five scenarios**.
