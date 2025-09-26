@@ -1,17 +1,19 @@
 {%- assign has_range = include.page.start and include.page.end -%}
 {%- assign has_single = include.page.date -%}
 
-{%- comment -%}
-  Build display_date with a visible space after the dash.
-  Avoid {%- -%} inside this block so Liquid doesn't trim the spaces.
-{%- endcomment -%}
-{%- capture display_date -%}
-  {% if has_range %}
-    {{ include.page.start | date: "%b %Y" }} &ndash; {% if include.page.present %}Present{% else %}{{ include.page.end | date: "%b %Y" }}{% endif %}
-  {% elsif has_single %}
-    {{ include.page.date | date: "%b %Y" }}
+{%- comment -%} Build display_date safely (no capture, no trimming issues) {%- endcomment -%}
+{%- assign display_date = '' -%}
+{% if has_range %}
+  {% assign left = include.page.start | date: "%b %Y" %}
+  {% if include.page.present %}
+    {% assign right = 'Present' %}
+  {% else %}
+    {% assign right = include.page.end | date: "%b %Y" %}
   {% endif %}
-{%- endcapture -%}
+  {% assign display_date = left | append: ' – ' | append: right %}
+{% elsif has_single %}
+  {% assign display_date = include.page.date | date: "%b %Y" %}
+{% endif %}
 
 <div class="card mb-3">
   <div class="row g-0">
@@ -28,7 +30,7 @@
       <div class="card-body">
         <h5 class="card-title d-flex justify-content-between align-items-start">
           <span>{{ include.page.title }}</span>
-          {% if display_date and display_date != "" %}
+          {% if display_date != '' %}
             <small class="text-muted">{{ display_date }}</small>
           {% endif %}
         </h5>
