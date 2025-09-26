@@ -1,21 +1,56 @@
+{%- assign has_range = include.page.start and include.page.end -%}
+{%- assign has_single = include.page.date -%}
+
+{%- comment -%}
+  Build a display_date:
+  - If start+end exist → "Aug 2024 – Jun 2025"
+  - Else if date exists → "Mar 2025"
+  - Else blank
+{%- endcomment -%}
+{%- capture display_date -%}
+  {%- if has_range -%}
+    {{ include.page.start | date: "%b %Y" }} – {{ include.page.end | date: "%b %Y" }}
+  {%- elsif has_single -%}
+    {{ include.page.date | date: "%b %Y" }}
+  {%- endif -%}
+{%- endcapture -%}
+
 <div class="card mb-3">
   <div class="row g-0">
     <div class="col-sm-6 col-md-4">
-      <img src="{{ site.baseurl }}/{{ include.page.image }}" height="225px" class="rounded-start">
+      <img
+        src="{{ site.baseurl }}/{{ include.page.image }}"
+        alt="{{ include.page.title }}"
+        height="225"
+        class="rounded-start w-100"
+        style="object-fit: cover;"
+        loading="lazy">
     </div>
     <div class="col-sm-6 col-md-8">
       <div class="card-body">
-        <h5 class="card-title">{{ include.page.title }} <small class="text-muted float-end">{{ include.page.date }}</small></h5>
-        <p class="card-text">{{ include.page.summary }}</p>
-        <p>
-          {% for label in include.page.labels %}
-          <span style="background-color: var(--tf-pill-bg)" class="badge rounded-pill">{{ label }}</span>
-          {% endfor %}
-        </p>
-        {% if page.projecturl %}
-        <a href="{{ page.projecturl }}" class="btn btn-outline-dark">Project Site</a>
+        <h5 class="card-title d-flex justify-content-between align-items-start">
+          <span>{{ include.page.title }}</span>
+          {% if display_date and display_date != "" %}
+            <small class="text-muted">{{ display_date }}</small>
+          {% endif %}
+        </h5>
+
+        {% if include.page.summary %}
+          <p class="card-text">{{ include.page.summary }}</p>
+        {% endif %}
+
+        {% if include.page.labels %}
+          <p class="mb-2">
+            {% for label in include.page.labels %}
+              <span style="background-color: var(--tf-pill-bg)" class="badge rounded-pill">{{ label }}</span>
+            {% endfor %}
+          </p>
+        {% endif %}
+
+        {% if include.page.projecturl %}
+          <a href="{{ include.page.projecturl }}" class="btn btn-outline-dark">Project Site</a>
         {% else %}
-        <a href="{{ site.baseurl}}{{ include.page.url }}" class="btn btn-outline-dark">Read More</a>
+          <a href="{{ site.baseurl }}{{ include.page.url }}" class="btn btn-outline-dark">Read More</a>
         {% endif %}
       </div>
     </div>

@@ -3,7 +3,9 @@ layout: project
 type: project
 image: img/sailbot/sailbot-square.jpg
 title: "Major Qualifying Project: SailBot"
-date: Aug 24' - Jun 25'
+# Dates
+start: 2024-08-01   # sortable start date
+end:   2025-06-30   # sortable end date
 published: true
 labels:
   - Git/GitHub
