@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/iqp/fertilizer-tank.jpg
+image: img/fertimixer/FertigationPrototype.jpg
 title: "Interactive Qualifying Project: Automated Fertilizer Mixing System"
 # date: Jan 2024 – Mar 2024
 start: 2024-01-01

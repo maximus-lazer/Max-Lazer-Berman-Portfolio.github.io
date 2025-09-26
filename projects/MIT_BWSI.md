@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/bwsi/auv-pool.jpg
+image: img/MITBWSI/BlueROV.jpg
 title: "MIT BWSI – Autonomous Underwater Vehicle TA"
 # date: Jul 2023 – Aug 2023
 start: 2023-07-01

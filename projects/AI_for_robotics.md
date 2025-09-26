@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/ai/bomberman-grid.jpg
+image: img/RBE/Bomberman
 title: "Artificial Intelligence for Robotics"
 # date: Jan 2025 – Mar 2025
 start: 2025-01-01

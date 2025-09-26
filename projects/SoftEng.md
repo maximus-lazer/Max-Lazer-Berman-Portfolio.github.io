@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/softwareeng/app-ui.jpg
+image: img/SoftEng/SoftEngRobotPage.png
 title: "CS Software Engineering Project"
 # date: Mar 2023 – May 2023
 start: 2023-03-01

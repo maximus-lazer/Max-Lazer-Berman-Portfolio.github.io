@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/hua/guitar-setup.jpg
+image: img/musical_robotics/EMGuitar.jpg
 title: "Musical Robotics – Electromagnet Guitar"
 # date: Oct 2024 – Dec 2024
 start: 2024-10-01
