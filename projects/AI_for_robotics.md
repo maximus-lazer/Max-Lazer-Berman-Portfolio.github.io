@@ -71,5 +71,5 @@ As part of **RBE4701: Artificial Intelligence for Robotics**, our team developed
 
 ## Media & Links
 - 📄 [Project 1 Report (PDF)]({{ site.baseurl }}/img/RBE/RBE4701_Group1_Project1.pdf)  
-- 📄 [Project 2 Report (PDF)]({{ site.baseurl }}img/RBE/RBE4701_Group1_Project2.pdf) 
+- 📄 [Project 2 Report (PDF)]({{ site.baseurl }}/img/RBE/RBE4701_Group1_Project2.pdf) 
 - 💻 [GitHub Repository](https://github.com/Robert-Gunduz/RBE470x-Project-Team01)  
