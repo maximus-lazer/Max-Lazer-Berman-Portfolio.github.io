@@ -3,7 +3,9 @@ layout: project
 type: project
 image: img/hua/guitar-setup.jpg
 title: "Musical Robotics – Electromagnet Guitar"
-date: Oct 2024 – Dec 2024
+# date: Oct 2024 – Dec 2024
+start: 2024-10-01
+end:   2024-12-31
 published: true
 labels:
   - Arduino

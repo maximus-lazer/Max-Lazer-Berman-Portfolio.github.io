@@ -3,7 +3,9 @@ layout: project
 type: project
 image: img/softwareeng/app-ui.jpg
 title: "CS Software Engineering Project"
-date: Mar 2023 – May 2023
+# date: Mar 2023 – May 2023
+start: 2023-03-01
+end:   2023-05-31
 published: true
 labels:
   - Java

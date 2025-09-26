@@ -3,7 +3,9 @@ layout: project
 type: project
 image: img/ai/bomberman-grid.jpg
 title: "Artificial Intelligence for Robotics"
-date: Jan 2025 – Mar 2025
+# date: Jan 2025 – Mar 2025
+start: 2025-01-01
+end:   2025-03-31
 published: true
 labels:
   - Python

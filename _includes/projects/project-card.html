@@ -7,10 +7,12 @@
   - Else if date exists → "Mar 2025"
   - Else blank
 {%- endcomment -%}
+{%- assign has_range = include.page.start and include.page.end -%}
 {%- capture display_date -%}
   {%- if has_range -%}
-    {{ include.page.start | date: "%b %Y" }} – {{ include.page.end | date: "%b %Y" }}
-  {%- elsif has_single -%}
+    {{ include.page.start | date: "%b %Y" }} –
+    {%- if include.page.present -%}Present{%- else -%}{{ include.page.end | date: "%b %Y" }}{%- endif -%}
+  {%- elsif include.page.date -%}
     {{ include.page.date | date: "%b %Y" }}
   {%- endif -%}
 {%- endcapture -%}

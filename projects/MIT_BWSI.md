@@ -3,7 +3,9 @@ layout: project
 type: project
 image: img/bwsi/auv-pool.jpg
 title: "MIT BWSI – Autonomous Underwater Vehicle TA"
-date: Jul 2023 – Aug 2023
+# date: Jul 2023 – Aug 2023
+start: 2023-07-01
+end:   2023-08-31
 published: true
 labels:
   - C++
