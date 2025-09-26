@@ -7,27 +7,38 @@
     </div>
 
     <div class="vstack gap-3">
-      {% assign project_pages = site.pages | where: "type", "project" | sort: "date" | reverse %}
-      {% for page in project_pages %}
-        {% unless page.draft %}
-          {% include projects/project-card.html page=page %}
-        {% endunless %}
-        {% if forloop.index == include.limit %}
-          {% break %}
-        {% endif %}
-      {% endfor %}
+      {%- assign all_projects = site.pages | where: "type", "project" -%}
+      {%- assign with_end = all_projects | where_exp: "p", "p.end" | sort: "end" | reverse -%}
+      {%- assign without_end = all_projects | where_exp: "p", "p.end == nil" | sort: "date" | reverse -%}
+      {%- assign project_pages = with_end | concat: without_end -%}
+
+      {%- comment -%} Move present:true projects to the top {%- endcomment -%}
+      {%- assign present_projects = project_pages | where_exp: "p", "p.present == true" -%}
+      {%- assign non_present_projects = project_pages | where_exp: "p", "p.present != true" -%}
+      {%- assign project_pages = present_projects | concat: non_present_projects -%}
+
+      {%- for page in project_pages -%}
+        {%- unless page.draft -%}
+          {%- include projects/project-card.html page=page -%}
+        {%- endunless -%}
+        {%- if forloop.index == include.limit -%}
+          {%- break -%}
+        {%- endif -%}
+      {%- endfor -%}
     </div>
 
-    {% assign not_draft = 0 %}
-      {% for page in project_pages %}
-      {% unless page.draft %}
-        {% assign not_draft = not_draft | plus: 1 %}
-      {% endunless %}
-    {% endfor %}
+    {%- assign not_draft = 0 -%}
+    {%- for page in project_pages -%}
+      {%- unless page.draft -%}
+        {%- assign not_draft = not_draft | plus: 1 -%}
+      {%- endunless -%}
+    {%- endfor -%}
 
-    {% if not_draft > include.limit %}
-      <p class="text-center pt-4"><a href="{{ site.baseurl}}/projects/">See all {{ not_draft }} projects</a></p>
-    {% endif %}
+    {%- if not_draft > include.limit -%}
+      <p class="text-center pt-4">
+        <a href="{{ site.baseurl}}/projects/">See all {{ not_draft }} projects</a>
+      </p>
+    {%- endif -%}
 
   </div>
 </div>
