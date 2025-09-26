@@ -3,13 +3,13 @@
 
 {%- comment -%}
   Build display_date:
-  - If start+end exist → "Aug 2024 – Jun 2025" (space after the dash)
-  - If present: true → "Aug 2021 – Present"
+  - If start+end exist → "Aug 2024 - Jun 2025" (space after the dash)
+  - If present: true → "Aug 2021 - Present"
   - Else if single date exists → "Mar 2025"
 {%- endcomment -%}
 {%- capture display_date -%}
   {%- if has_range -%}
-    {{ include.page.start | date: "%b %Y" }} – 
+    {{ include.page.start | date: "%b %Y" }} - 
     {%- if include.page.present -%}
       Present
     {%- else -%}
