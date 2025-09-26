@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/RBE/Bomberman
+image: img/RBE/Bomberman.png
 title: "Artificial Intelligence for Robotics"
 # date: Jan 2025 – Mar 2025
 start: 2025-01-01
