@@ -70,8 +70,7 @@ Improved an autonomous sailing robot for my senior capstone project (Major Quali
     class="w-100 rounded shadow-sm"
     controls
     playsinline
-    preload="metadata"
-    poster="{{ site.baseurl }}/img/sailbot/sailbot-ribs-1inch-CAM.png">
+    preload="metadata">
     <source src="{{ site.baseurl }}/img/sailbot/sailbot-machiningribs.mp4" type="video/mp4">
     Your browser does not support the video tag. You can <a href="{{ site.baseurl }}/img/sailbot/sailbot-machiningribs.MOV">download the .MOV</a> instead.
   </video>
